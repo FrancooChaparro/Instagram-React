@@ -1,0 +1,52 @@
+.ContainerNav { 
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    border-bottom: 0.01rem solid grey;
+}
+
+.ContainerTitle {
+    width: 33%;
+    padding-left: 33px;
+    padding-top: 8px;
+}
+
+.ContainerTitle span { 
+    font-size: 23px;
+    font-weight: bold;
+    color: black; 
+
+}
+
+
+.ContainerSearch {
+    width: 33%;
+    padding-top: 8px;
+    border: 0.01 rem solid rgb(207, 202, 202);
+    padding-left: 125px;
+}
+
+.ContainerSearch input { 
+    width: 223px;
+    height: 20px;
+}
+
+.ContainerSearch input::placeholder { /* CSS Standard */
+    text-align: center;
+}
+
+.ContainerIcons {
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ContainerIcons div { 
+    width: 35px;
+    padding-top: 12px;
+    padding-left: 15px;
+}
+
+.icon { 
+    font-size: 30px;
+}

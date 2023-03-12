@@ -1,0 +1,17 @@
+.HomeContainer { 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.HomeIzq {
+    width: 75%;
+}
+
+.HomeDer { 
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    width: 28%;
+}

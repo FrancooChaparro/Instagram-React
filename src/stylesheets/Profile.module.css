@@ -1,0 +1,92 @@
+.ContainerProfile { 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
+
+
+.HeaderProfile { 
+    width: 85%;
+    height: 200px;
+    border:0.02rem solid rgb(185, 182, 182); ;
+    display: flex;
+}
+
+.ContainerImg { 
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerImg img { 
+    width: 60%;
+    height: 75%;
+    border-radius: 50%;
+}
+
+
+
+
+.ContainerData { 
+    width: 68%;
+  
+}
+
+.top { 
+    display: flex; 
+    height: 30%;
+    padding-left: 12px;
+}
+
+.top span { 
+    font-size: 26px;
+    margin-right: 6px;
+}
+
+.top button { 
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: white;
+    border: 0.02rem solid rgb(185, 182, 182);
+    width: 120px;
+    cursor: pointer;
+}
+
+
+.top div {
+    margin-top: 9px; 
+    align-items: center;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+
+.mid {
+    display: flex; 
+    height: 30%;
+    padding-left: 12px;
+}
+
+.mid div { 
+    margin-right: 19px;
+    padding-top: 10px;
+}
+
+.bot { 
+    display: flex; 
+    height: 40%;
+    padding-left: 12px;
+}
+
+.bot div { 
+    margin-right: 15px;
+}
+
+.hash { 
+    color: rgb(39, 39, 177)
+}

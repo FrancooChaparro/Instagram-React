@@ -1,0 +1,138 @@
+.ContainerMenu {  
+    width: 320px;
+ }
+
+
+ .Profile { 
+    width: 100%;
+    height: 72px;
+    display: flex;
+ }
+
+ .ContainerImgProfile { 
+    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .ContainerNombreProfile {
+   
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+ }
+.ContainerNombreProfile h5 { 
+    margin-top: -21px;
+    color: rgb(189, 181, 181);
+}
+ .ContainerImgProfile img { 
+    border: 0.01rem solid rgb(77, 77, 77);
+    border-radius: 50%;
+    width: 80%;
+    height: 80%;
+ }
+
+
+
+
+
+
+ .SugerentionsTitle { 
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+ }
+
+ .SugerentionsTitle h4 { 
+    color: rgb(189, 181, 181);
+ }
+
+
+
+
+.SugerentionsImg { 
+    display: flex;
+    width: 100%;
+    height: 50px;
+    
+}
+
+.FriendsImg { 
+    width: 18%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FriendsImg img { 
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 0.01 rem solid rgb(116, 113, 113);
+}
+
+.FriendsName {
+    width: 62%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .FriendsName div { 
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+   
+ }
+
+ .follName { 
+    margin-top: 9px;
+    margin-bottom: -5px;
+    color: black;
+    font-size: 14px;
+ }
+
+.foll {
+    color: rgb(189, 181, 181);
+    font-size: 12px;
+}
+
+.FriendsFollow { 
+    width: 20%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FriendsFollow span { 
+    color: rgb(36, 119, 187);
+}
+
+
+
+.Footer { 
+    
+    padding-left: 5px;
+}
+
+.FooterData { 
+    margin-top: 20px;
+    font-size: 12px;
+    color: grey;
+}
+
+.FooterCopy { 
+    margin-top: 20px;
+    font-size: 12px;
+    color: grey;
+}
