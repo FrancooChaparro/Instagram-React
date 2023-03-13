@@ -1,0 +1,41 @@
+.ContainerHistorys { 
+    width: 900px;
+    height: 100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* overflow: auto; */
+    border: 0.01rem solid rgb(182, 180, 180);
+    margin-bottom: 30px;
+    display: flex;
+    overflow: auto;
+     /* -webkit-overflow-scrolling: touch; 
+   scroll-behavior: smooth; 
+     -ms-overflow-style: none;
+      scrollbar-width: none;  */
+      scroll-behavior:smooth
+    
+}
+
+/* .ContainerHistorys::-webkit-scrollbar {
+    display: none; 
+ } */
+
+
+.overflow { 
+    width: 1800px;
+    display: flex;  
+}
+.Container { 
+    height: 100%;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContainerHistorys img { 
+    border-radius: 50%;
+    height: 75%;
+    width: 75%;
+    border: 3px solid #aa48d1
+}

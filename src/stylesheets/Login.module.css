@@ -1,0 +1,40 @@
+.container { 
+    width: 760px;
+    height: 500px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 25px;
+    background-color: blue;
+}
+
+.ContainerIMG { 
+    width: 50%;
+    background-color: yellow;
+}
+.ContainerIMG img { 
+    width: 100%;
+    height: 100%;
+}
+ 
+.ContainerForm { 
+    width: 50%;
+    background-color: red;
+}
+
+.Title { 
+    height: 25%;
+    background-color: blue;
+}
+
+.Form {
+    height: 25%;
+    background-color: rgb(91, 91, 204);
+}
+.Google {
+    height: 25%;
+    background-color: rgb(136, 255, 0);
+}
+.Footer {
+    height: 25%;
+    background-color: rgb(255, 60, 0);
+}

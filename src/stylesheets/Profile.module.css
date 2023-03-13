@@ -1,18 +1,24 @@
 .ContainerProfile { 
-    width: 100%;
+    width: 85%;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    flex-direction: column;
+    margin-top: 15px;  
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 
 
 
 .HeaderProfile { 
-    width: 85%;
+    width: 100%;
     height: 200px;
-    border:0.02rem solid rgb(185, 182, 182); ;
+    border-top:0.02rem solid rgb(185, 182, 182); 
+    border-right:0.02rem solid rgb(185, 182, 182); ;
+    border-left:0.02rem solid rgb(185, 182, 182); ;
     display: flex;
+    margin: 0 auto;
 }
 
 .ContainerImg { 
@@ -73,7 +79,7 @@
 }
 
 .mid div { 
-    margin-right: 19px;
+    margin-right: 30px;
     padding-top: 10px;
 }
 
@@ -89,4 +95,43 @@
 
 .hash { 
     color: rgb(39, 39, 177)
+}
+
+
+
+.BodyProfile{ 
+    width: 100%;
+    height: 400px;
+    border: 0.01rem solid rgb(226, 223, 223);
+    margin: 0 auto;  
+}
+
+.BodyMenu { 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 45px;
+    align-items: center;
+}
+
+.BodyMenu div { 
+    width: 160px;
+    font-size: 17px;
+    color: rgb(167, 161, 161);
+}
+
+
+.BodyPosts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ImgCont { 
+    width: 31%;
+    height: 270px;
+}
+
+.ImgCont img { 
+    width: 100%;
+    height: 100%;
 }

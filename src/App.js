@@ -7,6 +7,7 @@ import { Register } from './components/Register';
 import { Home } from './components/Home';
 import { MenuLateral } from './components/MenuLateral';
 import { Posts } from './components/Posts';
+import { Historys } from './components/Historys';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/Home' element={<Home />} />
           <Route path='/Posts' element={<Posts />} />
           <Route path='/Menu' element={<MenuLateral />} />
+          <Route path='/Historys' element={<Historys />} />
        </Routes>
     </div>
   );
