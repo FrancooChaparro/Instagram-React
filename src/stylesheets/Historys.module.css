@@ -8,8 +8,8 @@
     margin-bottom: 30px;
     display: flex;
     overflow: auto;
-     /* -webkit-overflow-scrolling: touch; 
-   scroll-behavior: smooth; 
+    /* -webkit-overflow-scrolling: touch; 
+     scroll-behavior: smooth; 
      -ms-overflow-style: none;
       scrollbar-width: none;  */
       scroll-behavior:smooth
@@ -20,6 +20,25 @@
     display: none; 
  } */
 
+
+.ContainerHistorys::-webkit-scrollbar {
+    width: 5px; 
+    height: 9px;
+}
+
+.ContainerHistorys::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+}
+
+.ContainerHistorys::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 5px;
+}
+
+.ContainerHistorys::-webkit-scrollbar-thumb:hover {
+
+    background-color: #555; 
+  }
 
 .overflow { 
     width: 1800px;
