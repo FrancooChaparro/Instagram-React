@@ -3,13 +3,14 @@ import styles from "../stylesheets/Navbar.module.css";
 import { AiFillHome } from "react-icons/ai";
 import { FiSend, FiHeart } from "react-icons/fi";
 import { FaUserAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <div className={styles.ContainerNav}>
 
         <div className={styles.ContainerTitle}>
-          <span>Instagram</span>
+        <Link style={{textDecoration: "none"}} to="/"> <span>Instagram</span></Link>
         </div>
 
         <div className={styles.ContainerSearch}>
@@ -17,10 +18,10 @@ export const Navbar = () => {
         </div>
 
         <div className={styles.ContainerIcons}>
-          <div><span><AiFillHome className={styles.icon} /></span></div>
+          <div> <Link style={{textDecoration: "none"}} to="/"><span><AiFillHome className={styles.icon} /></span></Link></div>
           <div><span><FiSend className={styles.icon} /></span></div>
           <div><span><FiHeart className={styles.icon} /></span></div>
-          <div style={{marginRight: "20px"}}><span><FaUserAlt className={styles.icon}  /></span></div>   
+          <div style={{marginRight: "20px"}}><Link style={{textDecoration: "none"}} to="/Profile"><span><FaUserAlt className={styles.icon}  /></span></Link></div>   
         </div>
 
     </div>

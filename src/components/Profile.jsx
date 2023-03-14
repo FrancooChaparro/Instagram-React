@@ -5,6 +5,7 @@ import { BsPostcard } from "react-icons/bs";
 import { FaRegCaretSquareLeft } from "react-icons/fa";
 import { BsSave2 } from "react-icons/bs";
 import { RiFolderUserLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export const Profile = () => {
   return (

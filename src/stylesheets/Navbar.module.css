@@ -12,9 +12,10 @@
 }
 
 .ContainerTitle span { 
-    font-size: 23px;
+    font-size: 26px;
     font-weight: bold;
-    color: black; 
+     color: rgb(53, 52, 52);
+    font-family: 'Lobster', cursive;
 
 }
 
