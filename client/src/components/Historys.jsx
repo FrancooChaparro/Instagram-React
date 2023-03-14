@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../stylesheets/Historys.module.css"
 
-export const Historys = () => {
+export default function Historys () {
     return (
             <div className={styles.ContainerHistorys}>
                 <div className={styles.overflow}>

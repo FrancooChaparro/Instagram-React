@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "../stylesheets/Home.module.css";
 import { MenuLateral } from "./MenuLateral";
 import { Posts } from "./Posts";
-import { Historys } from "./Historys"
+import  Historys  from './Historys';
 
 export const Home = () => {
   return (
