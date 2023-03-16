@@ -136,3 +136,20 @@ input::placeholder {
     width: 100%;
     height: 100%;
 }
+
+
+
+
+@media (max-width: 412px) {
+    .ResponsiveDiv {
+        width: 100%;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ContainerForm { 
+        width: 80%;
+        height: 500px;
+    }
+ }

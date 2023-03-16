@@ -4,9 +4,23 @@ import {FaRegComment } from "react-icons/fa"
 import {BsSave2 } from "react-icons/bs"
 import {FiHeart, FiSend } from "react-icons/fi"
 import { AiTwotoneHeart } from "react-icons/ai"
-
+import { useState } from "react";
+import { FcLike } from "react-icons/fc"
 
 export const Posts = () => {
+    const [like, setLike] = useState(99)
+    const [isLiked, setIsLiked] = useState(true)
+
+    const liked = () => { 
+        if (like === 99) { 
+            setLike(100)
+            setIsLiked(!isLiked)
+        } else {
+            setLike(99)
+            setIsLiked(!isLiked)
+        }
+    }
+
   return (
     <div className={styles.ContainerPost}>
         <div className={styles.ContainerHeader}>
@@ -26,18 +40,18 @@ export const Posts = () => {
         </div>
         <div className={styles.ContainerIcons}>
                 <div className={styles.ContainerIconsIzq}>
-                     <div ><FiHeart /></div>
+                     <div onClick={()=> liked()}>{isLiked?<FiHeart />:<FcLike />}</div>
                     <div><FaRegComment /></div>
                     <div><FiSend /></div>
                  </div>
                  <div className={styles.ContainerIconsDer}>
-                    <div>
+                    <div >
                           <BsSave2 />
                     </div>
                  </div>    
         </div>
          <div className={styles.ContainerMG}>
-            <div><span><AiTwotoneHeart style={{fontSize: "16px"}}/> 532 Likes</span></div>
+            <div><span><AiTwotoneHeart style={{fontSize: "16px"}}/> {like} Likes</span></div>
          </div>
 
 

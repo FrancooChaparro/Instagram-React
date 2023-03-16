@@ -3,22 +3,19 @@
     height: 100px;
     margin: 0 auto;
     box-sizing: border-box;
-    /* overflow: auto; */
+     overflow: auto; 
     border: 0.01rem solid rgb(182, 180, 180);
     margin-bottom: 30px;
     display: flex;
-    overflow: auto;
-    /* -webkit-overflow-scrolling: touch; 
-     scroll-behavior: smooth; 
-     -ms-overflow-style: none;
-      scrollbar-width: none;  */
-      scroll-behavior:smooth
+    /* overflow-x: scroll; */
+    /* scroll-snap-type: x mandatory; */
+    user-select: none;
     
 }
 
-/* .ContainerHistorys::-webkit-scrollbar {
+/* .overflow::-webkit-scrollbar {
     display: none; 
- } */
+ }  */
 
 
 .ContainerHistorys::-webkit-scrollbar {
@@ -57,4 +54,19 @@
     height: 75%;
     width: 75%;
     border: 3px solid #aa48d1
+}
+
+
+
+@media (max-width: 412px) {
+    .ContainerHistorys {
+        width: 99%;
+        margin-bottom: 13px;
+        margin-top: 49px;
+    }
+.overflow::-webkit-scrollbar {
+    display: none; 
+ } 
+
+ 
 }
