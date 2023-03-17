@@ -7,11 +7,13 @@ import { BsSave2 } from "react-icons/bs";
 import { RiFolderUserLine } from "react-icons/ri";
 import { AiOutlineUserAdd } from "react-icons/ai"
 import { Link } from "react-router-dom";
-import { Posts } from "./Posts"
+import { Posts } from "./Posts";
+import { useNavigate } from 'react-router-dom';
 
 export const Profile = () => {
-
+  const navigate = useNavigate()
   const [isMobile, setIsMobile] = useState(true);
+  const userActive = JSON.parse(localStorage.getItem("USUARIO")) || []
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,15 +28,27 @@ export const Profile = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+
+  function CerrarSes(e) {
+    e.preventDefault();
+    setTimeout(() => {
+      // dispatch(deleteUserLocalStorage())
+      window.localStorage.removeItem("USUARIO")
+      navigate("/Login")
+    }, 1300)
+  }
+
+
   return (
     isMobile ?  <div className={styles.ContainerProfile}>
           <div className={styles.HeaderProfile}>
               <div className={styles.ContainerImg}>
-                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" />
+                  <img src={userActive.image ? userActive.image : "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29uYXxlbnwwfHwwfHw%3D&w=1000&q=80"} alt="" />
               </div>
               <div className={styles.ContainerData}>
                   <div className={styles.top}>
-                    <div> <span>Cristina CFK</span> </div>
+                    <div> <span>{userActive.name ? userActive.name : "Cristina Romero"}</span> </div>
                     <div><button style={{marginTop: "2px"}}> <strong><span style={{fontSize: "12px"}}>Editar Perfil</span></strong></button></div>
                     <div><VscSettingsGear style={{marginTop: "13px",fontSize: "19px"}}/></div>
                   </div>
@@ -44,8 +58,8 @@ export const Profile = () => {
                     <div> <strong>1000</strong> following</div>
                   </div>
                   <div className={styles.bot}>
-                     <div> <span className={styles.Subtitle}><strong>Soy cristina</strong></span></div>
-                     <div><span className={styles.hash}>#AguanteReact #AguanteJS #AguanteNode</span> </div>
+                     <div> <span className={styles.Subtitle}><strong>{userActive.username ? userActive.username : "Soy cristina"}</strong></span></div>
+                     <div><span className={styles.hash}>#ReactJS #JavaScript #Nodejs</span> </div>
                   </div>
               </div>
           </div>
@@ -67,7 +81,7 @@ export const Profile = () => {
    : <div className={styles.ResponsiveContainer}>
        <div  className={styles.ResponsiveHeader}>
             <div  className={styles.ResponsiveHeaderTop}>
-                <img src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" alt="" />
+                <img src={userActive.image ? userActive.image : "https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg"}  alt="" />
             </div>
             <div  className={styles.ResponsiveHeaderBot}>
                 <div><span  style={{paddingLeft: "14px"}}>54</span><span>Posts</span></div>
@@ -77,7 +91,7 @@ export const Profile = () => {
        </div>
        <div  className={styles.ResponsiveData}>
             <div className={styles.ResponsiveDataTop}>
-                  <div><span><strong>Maria Teresa</strong></span></div>
+                  <div><span><strong>{userActive.name ? userActive.name : "Maria Teresa"}</strong></span></div>
                   <div><span>Big into hiking & Nature</span></div>
             </div>
             <div className={styles.ResponsiveDataBot}>

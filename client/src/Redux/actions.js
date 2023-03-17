@@ -3,6 +3,7 @@ export const USER_ACTIVE = "USER_ACTIVE";
 
 
 export function userRegister(payload) { 
+  console.log(payload);
     return async function(dispatch){
         const response = await axios.post(`http://localhost:3001/register`,payload);
         return response;
@@ -39,7 +40,7 @@ export function userRegister(payload) {
 
 
   export function UserActive (payload) { 
-    console.log(payload, "paylo");
+    console.log(payload, "imagen");
     return  function(dispatch){
         return dispatch({
             type: USER_ACTIVE,

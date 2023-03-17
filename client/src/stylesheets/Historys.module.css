@@ -10,7 +10,7 @@
     /* overflow-x: scroll; */
     /* scroll-snap-type: x mandatory; */
     user-select: none;
-    
+    border-radius: 5px;
 }
 
 /* .overflow::-webkit-scrollbar {
@@ -53,9 +53,8 @@
     border-radius: 50%;
     height: 75%;
     width: 75%;
-    border: 3px solid #aa48d1
+    border: 3.5px solid rgb(174, 69, 206)
 }
-
 
 
 @media (max-width: 412px) {

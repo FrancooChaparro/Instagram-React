@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      { (location.pathname === "/Login" && isMobile || location.pathname === "/Register" && isMobile || location.pathname === "/" && isMobile ) && <Navbar />}
+      { (location.pathname === "/Profile" && !isMobile || location.pathname === "/") && <Navbar />}
        <Routes>
           <Route path='/Profile' element={<Profile />}/>
           <Route path='/Login' element={<Login />} />

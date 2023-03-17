@@ -2,16 +2,17 @@ import React from 'react';
 import styles from "../stylesheets/MenuLateral.module.css";
 
 export const MenuLateral = () => {
+        const userActive = JSON.parse(localStorage.getItem("USUARIO")) || []
     return (
         <div className={styles.ContainerMenu}>
             <div className={styles.Profile}>
                 <div className={styles.ContainerImgProfile}>
-                    <img src="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/e547d3b8ed07fe40d314336cee361323~c5_720x720.jpeg?x-expires=1678651200&x-signature=pUx5ZAy1py6oaZBdKS9XO8YZj0Q%3D" alt="" />
+                    <img src={userActive.image ? userActive.image : "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/e547d3b8ed07fe40d314336cee361323~c5_720x720.jpeg?x-expires=1678651200&x-signature=pUx5ZAy1py6oaZBdKS9XO8YZj0Q%3D"} alt="" />
                 </div>
                 <div className={styles.ContainerNombreProfile}>
                     <div>
-                        <h4>Franco</h4>
-                        <h5>Franco Chaparro</h5>
+                        <h4>{userActive.name ? userActive.name : "Franco"}</h4>
+                        <h5>{userActive.name ? userActive.username : "Franco Chaparro"}</h5>
                     </div>
                 </div>
             </div>

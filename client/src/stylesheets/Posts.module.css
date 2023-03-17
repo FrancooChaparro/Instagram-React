@@ -1,8 +1,19 @@
 .ContainerPost {
     width: 900px;
     height: 740px;
+    height: 650px;
     border: 0.01rem solid rgb(209, 205, 205);
     margin-top: 15px;
+    border-radius: 5px;
+}
+
+.ContainerPostConComment {
+    width: 900px;
+    height: 700px;
+    /* height: 650px; */
+    border: 0.01rem solid rgb(209, 205, 205);
+    margin-top: 15px;
+    border-radius: 5px;
 }
 
 .ContainerHeader { 
@@ -127,9 +138,24 @@
 
 .ContainerComments { 
     overflow-x: auto;
-
-
 }
+
+ .ResponsiveComments {
+    padding-left: 16px;
+}
+
+
+.ResponsiveInput { 
+    border: none;
+    font-size: 15px;
+}
+.ResponsiveInput::placeholder {
+    font-size: 14px;
+    color: grey;
+}
+.ResponsiveInput:focus {
+    outline: none;
+  } 
 
 @media (max-width: 412px) {
     .ContainerPost {
@@ -137,6 +163,12 @@
         height: 70%;
         border: 0.01rem solid rgb(180, 178, 178);
     }
+
+.ContainerPostConComment {
+    width: 99%;
+    height: 70%;
+    border: 0.01rem solid rgb(180, 178, 178);
+}
     .ContainerImg {
         width: 20%;
     }

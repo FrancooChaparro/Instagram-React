@@ -7,12 +7,12 @@ import { AiTwotoneHeart } from "react-icons/ai"
 import { useState } from "react";
 import { FcLike } from "react-icons/fc"
 
-export const Posts = () => {
+export const Posts = ({ img }) => {
     const [like, setLike] = useState(99)
     const [isLiked, setIsLiked] = useState(true)
     const [comment, setComment] = useState("")
     const [tagged, setTagged] = useState(false)
-
+    const [comento, setComento] = useState(true)
 
     const ComentInstagram = (e) => {
         setComment(e.target.value);
@@ -38,10 +38,11 @@ export const Posts = () => {
 
 function miFuncion() {
     setTagged(false);
+    setComento(!comento)
 }
 
   return (
-    <div className={styles.ContainerPost}>
+    <div className={comento ? styles.ContainerPost : styles.ContainerPostConComment}>
         <div className={styles.ContainerHeader}>
             <div className={styles.ContainerImg}>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYMDhSEs5xCFP41FawGvDnYYjQdzDhSMVlhbAWp_Pa&s" alt="" />
@@ -54,9 +55,14 @@ function miFuncion() {
                 <span>. . .</span>
             </div>
         </div>
+
+
+
         <div className={styles.ContainerPhoto}>
-            <img src="https://media.istockphoto.com/id/150638671/es/foto/esquiador-de-esqu%C3%AD-en-pistas-nival.jpg?s=612x612&w=0&k=20&c=AzR2BhnHGWaFpP3TzKnO6zvUYOul2Z7NAqBIhUvpTbs=" alt="" />
+            <img src={img} alt="" />
         </div>
+
+
         <div className={styles.ContainerIcons}>
                 <div className={styles.ContainerIconsIzq}>
                      <div onClick={()=> liked()}>{isLiked?<FiHeart />:<FcLike />}</div>

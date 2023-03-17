@@ -22,6 +22,7 @@ export const Register = () => {
       name: "",
       email: "",
       password: "",
+      username: "",
   });
 
 
@@ -46,8 +47,8 @@ function handleSubmit(e) {
         }
       }
 
-      if (input.name && input.name.length > 0 && input.name !== "") {
-        if (!regexName.test(input.name)) {
+      if (input.username && input.username.length > 0 && input.username !== "") {
+        if (!regexName.test(input.username)) {
             return swal("Invalid","Name invalid", "error")
         }
       }
@@ -69,6 +70,7 @@ function handleSubmit(e) {
             name: "",
             email: "",
             password: "",
+            username: "",
         });
         navigate("/Login")
       }
@@ -95,7 +97,7 @@ function handleSubmit(e) {
                   <form onSubmit={e => handleSubmit(e)} action="">
                       <input name='email' value={input.email}  onChange={e => handleChange(e)} type="email" placeholder='Correo Electronico'/>
                       <input  name='name' value={input.name}  onChange={e => handleChange(e)} type="text" placeholder='Nombre Completo'/>
-                      <input  name='username'  onChange={e => handleChange(e)} type="text" placeholder='Nombre de Usuario'/>
+                      <input  name='username' value={input.username}  onChange={e => handleChange(e)} type="text" placeholder='Nombre de Usuario'/>
                       <input  name='password' value={input.password}  onChange={e => handleChange(e)} type="password" placeholder='Contraseña'/>
                       <div className={styles.ContainerFormMid}><span>Al registrarte, aceptas nuestras Condiciones, nuestra Política de privacidad y nuestra Política de cookies.</span></div>
                       <div className={styles.ContainerFormBot}>

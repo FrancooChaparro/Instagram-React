@@ -11,9 +11,9 @@ const { Op } = require("sequelize");
     const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g
    
     try {
-      const { name, email, password} = req.body;
+      const { name, email, password, username} = req.body;
   
-      if (!name || !password || !email) return res.json({ msg: 'Missing required fields' });
+      if (!name || !password || !email || !username) return res.json({ msg: 'Missing required fields' });
   
   
       if (email && email.length > 0 && email != "") {
@@ -34,6 +34,14 @@ const { Op } = require("sequelize");
           return res.json({ msg: 'The name is invalid' });
         }
       }
+
+      if (username && username.length > 0 && username != "") {
+        if (regexName.test(username)) {
+          infoUser.username = `${username}`
+        } else {
+          return res.json({ msg: 'The name is invalid' });
+        }
+      }
   
       if (password && password.length > 0 && password != "") {
         if (regexPassword.test(password)) {
@@ -46,6 +54,7 @@ const { Op } = require("sequelize");
   
       await User.create({
         name: name,
+        username: username,
         password: infoUser.password,
         email: email,
       });
@@ -57,18 +66,19 @@ const { Op } = require("sequelize");
 
   const postUserGoogle = async (req, res) => { 
     try {
-      const { name, lastname, email, image} = req.body;
+      const { username, name, lastname, email, image} = req.body;
       if (!name || !lastname || !email) return res.json({ msg: 'Missing required fields', success: false  });
   
       // const userBD = await User.findOne({ where: { email: `${email}` } });
       // if (userBD) {
       //   return res.json({ msg: 'The email already exists', success: false  });
       // }
-       const Username = `${name} ${lastname}`
+      const nombre = `${name} ${lastname}`
       await User.create({
-        name: Username,
+        name: nombre,
+        username: username,
         email: email,
-        // image: image,
+        image: image,
         password: "XDRWQDFF11asedfa123"
       });
 
@@ -93,10 +103,9 @@ const { Op } = require("sequelize");
           success: true,
         });
       }
+      
       if (!checkPassword) {
         return res.json({ msg: 'Invalid password', success: false, });
-  
-  
       }
     } catch (error) {
       return res.json({ msg: `Error 404 - ${error}` });
