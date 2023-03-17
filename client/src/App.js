@@ -29,7 +29,6 @@ function App() {
     handleResize(); // llama a la función de manejo de tamaño inicialmente
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  console.log(isMobile);
 
   return (
     <div className="App">

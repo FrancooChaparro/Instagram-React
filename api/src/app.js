@@ -1,8 +1,9 @@
 const express = require('express');
-const routes = require('./src/routes/index');
+const router = require("./routes/index");
+// const { userRouter } = require("./userRouter")
 // const fileUpload =require('express-fileupload');
 const cors = require("cors");
-require('./db.js');
+require('../db.js');
 
 const server = express();
 
@@ -23,7 +24,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use('/', routes);
+server.use('/', router);
 server.use(cors());
 server.use(express.urlencoded({ extended: false }));
 

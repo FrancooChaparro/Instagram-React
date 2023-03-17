@@ -10,6 +10,14 @@ import { FcLike } from "react-icons/fc"
 export const Posts = () => {
     const [like, setLike] = useState(99)
     const [isLiked, setIsLiked] = useState(true)
+    const [comment, setComment] = useState("")
+    const [tagged, setTagged] = useState(false)
+
+
+    const ComentInstagram = (e) => {
+        setComment(e.target.value);
+ 
+      }
 
     const liked = () => { 
         if (like === 99) { 
@@ -20,6 +28,17 @@ export const Posts = () => {
             setIsLiked(!isLiked)
         }
     }
+
+
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+            miFuncion()
+        }
+      };
+
+function miFuncion() {
+    setTagged(false);
+}
 
   return (
     <div className={styles.ContainerPost}>
@@ -41,7 +60,7 @@ export const Posts = () => {
         <div className={styles.ContainerIcons}>
                 <div className={styles.ContainerIconsIzq}>
                      <div onClick={()=> liked()}>{isLiked?<FiHeart />:<FcLike />}</div>
-                    <div><FaRegComment /></div>
+                    <div onClick={()=>  setTagged(true)}><FaRegComment /></div>
                     <div><FiSend /></div>
                  </div>
                  <div className={styles.ContainerIconsDer}>
@@ -57,16 +76,21 @@ export const Posts = () => {
 
 
         <div className={styles.ContainerComments}>
-           <div className={styles.NumberPosts}>
+           { comment.length > 0 && !tagged  &&  <div className={styles.NumberPosts}>
             <div className={styles.CommentsName}>
                 <span>Franco Chaparro</span>
             </div>
-            <div>
-                <span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit deserunt magnam natus, nobis quibusdam porro veritatis aut debitis dolores dolorum in doloremque quidem iste ipsa, saepe explicabo eum ratione cum.
+            <div style={{paddingBottom: "5px"}}>
+                <span >
+                    {comment}
                 </span>
             </div>
-           </div>
+           </div> 
+           }
+           {tagged &&  <div className={styles.ResponsiveComments}>
+                   <input  onChange={ComentInstagram} onKeyPress={handleKeyPress} type="text" placeholder='Escribe un comentario...' className={styles.ResponsiveInput} />
+              </div>
+            }
         </div>
     </div>
   )

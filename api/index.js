@@ -26,7 +26,7 @@
 
 
 
-const server = require('./app.js');
+const server = require('./src/app');
 const { conn } = require('./db.js');
 const { PORT } = process.env
 

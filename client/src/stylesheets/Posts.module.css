@@ -115,16 +115,21 @@
 .NumberPosts {
     padding-left: 14px;
     padding-right: 14px;
+    margin-bottom: 5px;
 }
 
 .CommentsName { 
     color: black;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
+.ContainerComments { 
+    overflow-x: auto;
 
+
+}
 
 @media (max-width: 412px) {
     .ContainerPost {
@@ -135,4 +140,22 @@
     .ContainerImg {
         width: 20%;
     }
- }
+ .ResponsiveComments {
+         width: 88%;
+         height: 98%;
+         padding-left: 6px;
+         display: flex;
+         justify-content: center;
+    }
+    .ResponsiveInput { 
+        width: 90%;
+        height: 30px;
+        border: none;
+        font-size: 22px;   
+    }
+   
+    .ResponsiveInput:focus {
+        outline: none;
+      } 
+
+    }
