@@ -48,7 +48,7 @@ function miFuncion() {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYMDhSEs5xCFP41FawGvDnYYjQdzDhSMVlhbAWp_Pa&s" alt="" />
             </div>
             <div className={styles.ContainerData}>
-                    <div  className={styles.name}><span>Cristina CFK</span></div>
+                    <div  className={styles.name}><span>Cristina Coria</span></div>
                     <div  className={styles.place}><span>Nuñez, ciudad de Buenos Aires</span></div> 
             </div>
             <div className={styles.ContainerDesplegable}>

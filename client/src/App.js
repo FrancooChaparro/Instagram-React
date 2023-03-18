@@ -12,6 +12,9 @@ import { Footer } from "./components/Footer";
 import { Search } from "./components/Search"
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { ResponsiveHome } from "./components/ResponsiveHome"
+import { ResponsiveNav } from "./components/ResponsiveNav"
+import { LoginResponsive } from "./components/LoginResponsive"
 
 function App() {
   const location = useLocation();
@@ -19,7 +22,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 450) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -32,12 +35,13 @@ function App() {
 
   return (
     <div className="App">
-      { (location.pathname === "/Profile" && !isMobile || location.pathname === "/") && <Navbar />}
+      { (location.pathname === "/Profile" && !isMobile || location.pathname === "/" && !isMobile) && <Navbar />}
+      {  (location.pathname === "/" && isMobile) && <ResponsiveNav />}
        <Routes>
           <Route path='/Profile' element={<Profile />}/>
-          <Route path='/Login' element={<Login />} />
+          <Route path='/Login' element={isMobile ? <LoginResponsive/> : <Login />} />
           <Route path='/Register' element={<Register />} />
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={isMobile ?  <ResponsiveHome/> : <Home /> } />
           <Route path='/Posts' element={<Posts />} />
           <Route path='/Menu' element={<MenuLateral />} />
           <Route path="/Historias" element={<Historys />} />

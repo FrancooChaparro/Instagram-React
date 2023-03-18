@@ -160,7 +160,7 @@ input::placeholder {
 }
 
 
-@media (max-width: 412px) {
+@media (max-width: 450px) {
     .ContainerAll {
         height: 700px;
         margin-top: 50px;

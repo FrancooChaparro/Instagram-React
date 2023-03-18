@@ -17,7 +17,7 @@ export const Profile = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 450) {
         setIsMobile(false);
       } else {
         setIsMobile(true);
@@ -50,7 +50,7 @@ export const Profile = () => {
                   <div className={styles.top}>
                     <div> <span>{userActive.name ? userActive.name : "Cristina Romero"}</span> </div>
                     <div><button style={{marginTop: "2px"}}> <strong><span style={{fontSize: "12px"}}>Editar Perfil</span></strong></button></div>
-                    <div><VscSettingsGear style={{marginTop: "13px",fontSize: "19px"}}/></div>
+                    <div><VscSettingsGear onClick={(e)=> CerrarSes(e)} style={{marginTop: "13px",fontSize: "19px"}}/></div>
                   </div>
                   <div className={styles.mid}>
                     <div> <strong>1000</strong> posts</div>

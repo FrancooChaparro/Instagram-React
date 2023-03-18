@@ -140,7 +140,7 @@ input::placeholder {
 
 
 
-@media (max-width: 412px) {
+@media (max-width: 450px) {
     .ResponsiveDiv {
         width: 100%;
         height: 650px;

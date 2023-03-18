@@ -11,7 +11,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 450) {
         setIsMobile(false);
       } else {
         setIsMobile(true);
@@ -37,7 +37,7 @@ export const Navbar = () => {
         <div><span><Link style={{ textDecoration: "none", color: "black" }} to="/"><AiFillHome className={styles.icon} /></Link> </span></div>
         <div><span><FiSend className={styles.icon} /></span></div>
         <div><span><FiHeart className={styles.icon} /></span></div>
-        <div style={{ marginRight: "20px" }}><Link style={{ textDecoration: "none" }} to="/Profile"><span><img className={styles.profileimg} src={userActive.image} alt="" /></span></Link></div>
+        <div style={{ marginRight: "20px" }}><Link style={{ textDecoration: "none",  color: "black" }} to="/Profile"><span>{userActive.image ? <img className={styles.profileimg} src={userActive.image} alt="" /> :  <FaUserAlt className={styles.icon} />}</span></Link></div>
       </div>
     </div>
       :
