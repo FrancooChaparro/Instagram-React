@@ -28,7 +28,7 @@
 
 const server = require('./src/app');
 const { conn } = require('./db.js');
-const { PORT } = process.env
+const  PORT  = process.env.PORT || 3001;
 
 // Syncing all the models at once.
 conn.sync({ alter: true }).then(() => { //CAMBIAR A {alter: true} CUANDO TERMINE DE CREAR TODO EL BACKEND
