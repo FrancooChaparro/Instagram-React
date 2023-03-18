@@ -5,7 +5,7 @@ export const USER_ACTIVE = "USER_ACTIVE";
 export function userRegister(payload) { 
   console.log(payload);
     return async function(dispatch){
-        const response = await axios.post(`http://localhost:3001/register`,payload);
+        const response = await axios.post(`/register`,payload);
         return response;
     };
   };
@@ -14,7 +14,7 @@ export function userRegister(payload) {
   
   export function userLogin(payload) { 
     return async function(dispatch){
-        const response = await axios.post(`http://localhost:3001/login`,payload);
+        const response = await axios.post(`/login`,payload);
         console.log(response.data);
         return response;
     };
@@ -23,7 +23,7 @@ export function userRegister(payload) {
 
   export function postUsersGoogle(payload) { 
     return async function(dispatch){
-        const response = await axios.post(`http://localhost:3001/google`,payload);
+        const response = await axios.post(`/google`,payload);
         return response;
     };
   };
@@ -31,7 +31,7 @@ export function userRegister(payload) {
 
   export function loginGoogle(payload) { 
     return async function(dispatch){
-        let json  = await axios.post(`http://localhost:3001/loginGoogle`,payload);
+        let json  = await axios.post(`/loginGoogle`,payload);
         return json.data
     };
   };

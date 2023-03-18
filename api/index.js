@@ -29,9 +29,10 @@
 const server = require('./src/app');
 const { conn } = require('./db.js');
 const  PORT  = process.env.PORT || 3001;
+const HOST = process.env.HOST || "0.0.0.0"
 
 // Syncing all the models at once.
-conn.sync({ alter: true }).then(() => { //CAMBIAR A {alter: true} CUANDO TERMINE DE CREAR TODO EL BACKEND
+conn.sync({ force: false }).then(() => { //CAMBIAR A {alter: true} CUANDO TERMINE DE CREAR TODO EL BACKEND
   server.listen(PORT, () => {
     console.log(`🚀 Server listening at ${PORT}`); // eslint-disable-line no-console
   });
