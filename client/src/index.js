@@ -9,7 +9,7 @@ import store from "./Redux/store";
 import axios from "axios";
 
 
-axios.defaults.baseURL = process.env.REACT_APP || "http://localhost:3002"
+axios.defaults.baseURL = process.env.REACT_APP || "https://instagram-frontend-three.vercel.app/" 
 
 // process.env.REACT_APP || 
 
