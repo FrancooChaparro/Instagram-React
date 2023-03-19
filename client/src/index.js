@@ -9,8 +9,9 @@ import store from "./Redux/store";
 import axios from "axios";
 
 
-axios.default.baseURL = process.env.REACT_APP || "http://localhost:3001"
+axios.defaults.baseURL = process.env.REACT_APP || "http://localhost:3002"
 
+// process.env.REACT_APP || 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

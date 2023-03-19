@@ -12,7 +12,7 @@ const { Op } = require("sequelize");
    
     try {
       const { name, email, password, username} = req.body;
-  
+
       if (!name || !password || !email || !username) return res.json({ msg: 'Missing required fields' });
   
   
@@ -51,7 +51,7 @@ const { Op } = require("sequelize");
           return res.json({ msg: 'The password is invalid' });
         }
       }
-  
+
       await User.create({
         name: name,
         username: username,
@@ -60,7 +60,7 @@ const { Op } = require("sequelize");
       });
       return res.json({ msg: `User create succesfully` });
     } catch (error) {
-      return res.json({ msg: `Error 404 - ${error}` });
+      return res.json({ msg: `Error 404 - ${error.msg}` });
     }
   }
 

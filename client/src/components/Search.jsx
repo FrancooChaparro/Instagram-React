@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "../stylesheets/Search.module.css";
-
+import { Link } from 'react-router-dom';
 
 export const Search = () => {
   return (
@@ -10,7 +10,7 @@ export const Search = () => {
         </div>
         <div  className={styles.SearchResponsiveBot}>
             <div  className={styles.Container}>
-                    <div><img src="https://www.nationalgeographic.com.es/medio/2021/11/29/fotografo-de-paisajes-naturales-del-ano-ganador-absoluto_5cbce102_800x533.jpg" alt="" /></div>
+                    <div><Link to="/SearchPhoto"><img src="https://www.nationalgeographic.com.es/medio/2021/11/29/fotografo-de-paisajes-naturales-del-ano-ganador-absoluto_5cbce102_800x533.jpg" alt="" /></Link></div>
                     <div><img src="https://concepto.de/wp-content/uploads/2019/02/paisaje-natural-item-5.jpg" alt="" /></div>
                     <div><img src="https://www.queenonline.com/global/uploads/MOJOQueenpart2.jpg" alt="" /></div>
             </div>

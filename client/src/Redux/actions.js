@@ -6,6 +6,7 @@ export function userRegister(payload) {
   console.log(payload);
     return async function(dispatch){
         const response = await axios.post(`/register`,payload);
+        console.log(response, "response");
         return response;
     };
   };

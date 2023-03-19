@@ -15,6 +15,10 @@ import { useState, useEffect } from 'react';
 import { ResponsiveHome } from "./components/ResponsiveHome"
 import { ResponsiveNav } from "./components/ResponsiveNav"
 import { LoginResponsive } from "./components/LoginResponsive"
+import { SearchPhoto } from "./components/SearchPhoto"
+import { useWindowSize } from './Hooks/useWindowSize';
+import { ProtectedRoute } from "./components/ProtectedRoute"
+import { ProtectedRouteL } from "./Hooks/ProtectedRouteL"
 
 function App() {
   const location = useLocation();
@@ -22,7 +26,7 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 450) {
+      if (window.innerWidth <= 550) {
         setIsMobile(true);
       } else {
         setIsMobile(false);
@@ -33,20 +37,24 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  console.log(useWindowSize().width);
   return (
     <div className="App">
       { (location.pathname === "/Profile" && !isMobile || location.pathname === "/" && !isMobile) && <Navbar />}
       {  (location.pathname === "/" && isMobile) && <ResponsiveNav />}
        <Routes>
           <Route path='/Profile' element={<Profile />}/>
-          <Route path='/Login' element={isMobile ? <LoginResponsive/> : <Login />} />
+          {/* <Route path='/Login' element={isMobile ? <LoginResponsive/> : <Login />} /> */}
+          <Route path='/Login' element={<ProtectedRouteL isAllowed={useWindowSize().width}/>} />
           <Route path='/Register' element={<Register />} />
-          <Route path='/' element={isMobile ?  <ResponsiveHome/> : <Home /> } />
+          {/* <Route path='/' element={isMobile ?  <ResponsiveHome/> : <Home /> } /> */}
+          <Route path='/' element={<ProtectedRoute isAllowed={useWindowSize().width}/>} />
           <Route path='/Posts' element={<Posts />} />
           <Route path='/Menu' element={<MenuLateral />} />
           <Route path="/Historias" element={<Historys />} />
           <Route path='/Footer' element={<Footer />}/>
           <Route path='/Search' element={<Search />}/>
+          <Route path='/SearchPhoto' element={<SearchPhoto />}/>
        </Routes>
         {isMobile && <Footer />} 
     </div>

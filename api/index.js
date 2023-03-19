@@ -28,8 +28,12 @@
 
 const server = require('./src/app');
 const { conn } = require('./db.js');
-const  PORT  = process.env.PG_PORT || 3001;
+const  PORT  =  process.env.PG_PORT || 3002;
 const HOST = process.env.PG_HOST || "0.0.0.0"
+
+// process.env.PG_PORT ||
+// process.env.PG_HOST ||
+
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => { //CAMBIAR A {alter: true} CUANDO TERMINE DE CREAR TODO EL BACKEND
