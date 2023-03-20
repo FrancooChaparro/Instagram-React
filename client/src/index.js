@@ -11,7 +11,7 @@ import dotenv from "dotenv";
 dotenv.config()
 
 
-axios.defaults.baseURL = process.env.REACT_APP || "http://localhost:3002"
+axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3002"
 
 // process.env.REACT_APP ||
 
