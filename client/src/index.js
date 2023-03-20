@@ -7,9 +7,13 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./Redux/store";
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config()
 
 
-axios.defaults.baseURL = "https://instagram-back-sooty.vercel.app" || "http://localhost:3002"
+axios.defaults.baseURL = process.env.REACT_APP || "http://localhost:3002"
+
+// process.env.REACT_APP ||
 
 // https://instagram-back-sooty.vercel.app/
 
@@ -17,7 +21,7 @@ axios.defaults.baseURL = "https://instagram-back-sooty.vercel.app" || "http://lo
 
 
 
-// process.env.REACT_APP || 
+// process.env.REACT_APP_API || 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

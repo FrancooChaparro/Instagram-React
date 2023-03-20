@@ -37,7 +37,7 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(useWindowSize().width);
+  
   return (
     <div className="App">
       { (location.pathname === "/Profile" && !isMobile || location.pathname === "/" && !isMobile) && <Navbar />}
