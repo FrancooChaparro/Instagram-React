@@ -59,11 +59,6 @@ function handleSubmit(e) {
         }
       }
 
-    //   if (emails.includes(input.email)) {
-    //     return swal("Invalid",'Email already exists', "error")
-    // }
-
-
         dispatch(userRegister(input));
         swal("success",'User created successfully', "success")
         setInput({
