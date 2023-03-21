@@ -13,7 +13,7 @@ export const Posts = ({ img }) => {
     const [comment, setComment] = useState("")
     const [tagged, setTagged] = useState(false)
     const [comento, setComento] = useState(true)
-
+    const userActive = JSON.parse(localStorage.getItem("USUARIO")) || []
     const ComentInstagram = (e) => {
         setComment(e.target.value);
  
@@ -84,7 +84,7 @@ function miFuncion() {
         <div className={styles.ContainerComments}>
            { comment.length > 0 && !tagged  &&  <div className={styles.NumberPosts}>
             <div className={styles.CommentsName}>
-                <span>Franco Chaparro</span>
+                <span>{userActive.name ? userActive.name : "Franco Chaparro"}</span>
             </div>
             <div style={{paddingBottom: "5px"}}>
                 <span >

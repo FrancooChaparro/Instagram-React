@@ -13,15 +13,7 @@ import axios from "axios";
 
 axios.defaults.baseURL = process.env.REACT_APP_API || "http://localhost:3002"
 
-// process.env.REACT_APP ||
 
-// https://instagram-back-sooty.vercel.app/
-
-// https://instagram-frontend-three.vercel.app/
-
-
-
-// process.env.REACT_APP_API || 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

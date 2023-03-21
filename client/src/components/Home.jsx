@@ -16,7 +16,7 @@ export const Home = () => {
       }
     };
     window.addEventListener("resize", handleResize);
-    handleResize(); // llama a la función de manejo de tamaño inicialmente
+    handleResize(); 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

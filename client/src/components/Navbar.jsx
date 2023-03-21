@@ -18,7 +18,7 @@ export const Navbar = () => {
       }
     };
     window.addEventListener("resize", handleResize);
-    handleResize(); // llama a la función de manejo de tamaño inicialmente
+    handleResize(); 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -52,7 +52,3 @@ export const Navbar = () => {
 
   )
 }
-{/* <img src={userActive.image} alt="" /> */}
-{/* <FaUserAlt className={styles.icon} /> */}
-
-{/* <Link style={{ textDecoration: "none" }} to="/"></Link></Link> */}
