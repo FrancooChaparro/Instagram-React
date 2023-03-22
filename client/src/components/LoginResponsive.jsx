@@ -61,7 +61,6 @@ export const LoginResponsive = () => {
       email : infoGoogle.email
     }
     console.log(infoGoogle.image);
-     console.log(email, "mail");
      const usuario = await dispatch(loginGoogle(email))
 
 
@@ -69,7 +68,7 @@ export const LoginResponsive = () => {
               dispatch(UserActive(usuario))
               setTimeout( ()=> {
                   navigate("/Profile")
-          }, 800)
+          }, 300)
 
       } else { 
           return swal("User Banned", "your account has been suspended", "error");
@@ -163,7 +162,7 @@ useEffect(() => {
 
               <div className={styles.Google}>
                 <div className={styles.top}><span><div id="signInDiv"></div></span> </div>
-                <div className={styles.bot}><span style={{color: "rgb(44, 44, 44)"}}>Dont have an account? <Link style={{textDecoration: "none"}} to={"/Register"}><span>Register</span></Link></span> </div>
+                <div className={styles.bot}><span style={{color: "rgb(44, 44, 44)"}}>No tienes una cuenta? <Link style={{textDecoration: "none"}} to={"/Register"}><span>Registrate</span></Link></span> </div>
               </div>
 
               <div className={styles.Footer}>
