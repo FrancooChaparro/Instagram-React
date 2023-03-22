@@ -4,6 +4,7 @@
     display: flex;
     margin: 0 auto;
     margin-top: 25px;
+    user-select: none;
     /* border: 0.01rem solid rgb(199, 195, 195); */
 }
 

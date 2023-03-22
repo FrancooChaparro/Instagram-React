@@ -16,9 +16,9 @@ export const ResponsiveHome = () => {
   <Posts img={"https://thumbs.dreamstime.com/b/paisajes-de-yosemite-46208063.jpg"}/>
    <Posts img={"https://www.hospitalveterinariglories.com/wp-content/uploads/2022/11/25-11-22-X-datos-increi%CC%81bles-sobre-los-caballos.jpg"}/>
     <br />
+    {/* <br />
     <br />
-    <br />
-    <br />
+    <br /> */}
 </div> 
   )
 }

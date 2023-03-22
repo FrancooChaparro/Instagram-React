@@ -60,8 +60,7 @@ export const Login = () => {
     const email = {
       email : infoGoogle.email
     }
-    console.log(infoGoogle.image);
-     console.log(email, "mail");
+
      const usuario = await dispatch(loginGoogle(email))
 
 
