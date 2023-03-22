@@ -5,6 +5,7 @@
     border: 0.01rem solid rgb(209, 205, 205);
     margin-top: 15px;
     border-radius: 5px;
+    user-select: none;
 }
 
 .ContainerPostConComment {
