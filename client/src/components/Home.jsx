@@ -24,7 +24,7 @@ export const Home = () => {
 
 
   return (
-      <div className={styles.HomeContainer}>
+    <div className={styles.HomeContainer}>
     <div className={styles.HomeIzq}>
       <div style={{ width: "900px", paddingLeft: "40px" }}>
         <Historys />
